@@ -5,8 +5,7 @@ import functools
 import math
 
 from django.conf import settings
-from django.core.paginator import (InvalidPage, Page, Paginator,
-                                   QuerySetPaginator)
+from django.core.paginator import (InvalidPage, Page, Paginator)
 
 __all__ = (
     'InvalidPage',
@@ -296,7 +295,7 @@ class DiggPage(Page):
         )
 
 
-class QuerySetDiggPaginator(DiggPaginator, QuerySetPaginator):
+class QuerySetDiggPaginator(DiggPaginator, Paginator):
     pass
 
 
